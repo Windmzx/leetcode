@@ -30,4 +30,8 @@ public class Solution {
         }
         return newlist;
     }
+
+    public static void main(String[] args) {
+
+    }
 }
