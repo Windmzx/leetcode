@@ -16,18 +16,18 @@ public class Solution2 {
     }
 
 
-    public ListNode mergeTwoList(ListNode list1, ListNode list2) {
-        if (list1 == null)
-            return list2;
-        if (list2 == null)
-            return list1;
+    public ListNode mergeTwoList(ListNode l1, ListNode l2) {
+        if (l1 == null)
+            return l2;
+        if (l2 == null)
+            return l1;
         ListNode head = null;
-        if (list1.val <= list2.val) {
-            head = list1;
-            head.next = mergeTwoList(list1.next, list2);
+        if (l1.val <= l2.val) {
+            head = l1;
+            head.next = mergeTwoList(l1.next, l2);
         } else {
-            head = list2;
-            ListNode re = mergeTwoList(list1, list2.next);
+            head = l2;
+            ListNode re = mergeTwoList(l1, l2.next);
             head.next = re;
         }
         return head;
